@@ -1,6 +1,31 @@
-.message {
-    margin: 5;
+#page-container {
+    background-color: black;
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.text-small {
     font-family: "Segoe UI";
-    font-weight: bold;
+    color: white;
+}
+
+#tab-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    width: 300px;
+    justify-content: space-evenly;
+}
+
+.text-large {
+    font-family: "Segoe UI";
+    color: white;
     font-size: xx-large;
+    font-weight: bold;
 }
