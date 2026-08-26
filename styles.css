@@ -9,7 +9,7 @@ body {
 #page-container {
     background-color: black;
     width: 760px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #menu-container {
@@ -17,7 +17,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     margin-left: 30px;
-    margin-right: 17px;
+    margin-right: 25px;
 }
 
 #tab-container {
@@ -40,13 +40,42 @@ body {
     color: white;
 }
 
-.link {
+.tab-link {
     font-family: "Segoe UI";
     color: white;
     text-decoration: none;
 }
 
-.link:hover {
+.tab-link:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+#list {
+    width: 680px;
+    margin-bottom: 50px;
+}
+
+.list-item {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.text-medium {
+    font-family: "Segoe UI";
+    color: white;
+    font-size: x-large;
+}
+
+.ext-link {
+    font-family: "Segoe UI";
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+.ext-link:hover {
     color: aqua;
     text-decoration: underline;
 }
