@@ -28,6 +28,12 @@ body {
     justify-content: space-evenly;
 }
 
+#banner {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
 .text-large {
     font-family: "Segoe UI";
     color: white;
