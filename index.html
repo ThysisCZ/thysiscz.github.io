@@ -3,31 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Thysis' Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Thysis | Home</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="assets/favicon.ico" rel="icon" />
+    <script src="http://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        $(function () {
+            $("#menu-container").load("menu.html");
+        }); 
+    </script>
 </head>
 
 <body>
     <div id="page-container">
-        <div id="menu-container">
-            <div>
-                <img src="assets/logo.jpg">
-            </div>
-            <div id="tab-container">
-                <div class="text-small">
-                    Home
-                </div>
-                <div class="text-small">
-                    Projects
-                </div>
-                <div class="text-small">
-                    Music
-                </div>
-                <div class="text-small">
-                    About Me
-                </div>
-            </div>
-        </div>
+        <div id="menu-container"></div>
         <div style="display: flex; justify-content: center">
             <img src="assets/banner.png">
         </div>
