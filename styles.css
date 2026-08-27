@@ -85,3 +85,7 @@ body {
     color: aqua;
     text-decoration: underline;
 }
+
+#grid {
+    display: grid;
+}
