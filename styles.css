@@ -59,7 +59,7 @@ body {
 
 #list {
     width: 680px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .list-item {
@@ -86,6 +86,15 @@ body {
     text-decoration: underline;
 }
 
+#grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #grid {
     display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+    row-gap: 30px;
 }
