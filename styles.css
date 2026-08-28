@@ -98,3 +98,16 @@ body {
     column-gap: 30px;
     row-gap: 30px;
 }
+
+#profile-photo {
+    max-width: 175px;
+    border-radius: 100px;
+}
+
+#basic-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 100px;
+    align-items: center;
+}
