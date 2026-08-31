@@ -153,6 +153,9 @@ body {
     display: flex;
     width: max-content;
     gap: 18px;
+}
+
+.gif-track.animate {
     animation: scroll-gifs 45s linear infinite;
 }
 
