@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(141, 43, 58);
+    background: linear-gradient(to bottom, rgb(141, 43, 58), #0a1628);
     display: flex;
     justify-content: center;
     margin: 0;
@@ -25,7 +25,6 @@ body {
     padding: 14px 20px 12px;
     background-color: #111;
     border-bottom: 1px solid #333;
-    margin-bottom: 10px;
 }
 
 #tab-container {
@@ -60,6 +59,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 40px;
+    margin-top: -5px;
 }
 
 #banner-wrapper {
@@ -105,7 +105,7 @@ body {
 
 #list {
     max-width: 720px;
-    margin-bottom: 40px;
+    margin: 30px 0 40px 0;
 }
 
 .list-item {
@@ -141,6 +141,26 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.gif-marquee {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.gif-track {
+    display: flex;
+    width: max-content;
+    gap: 18px;
+    animation: scroll-gifs 45s linear infinite;
+}
+
+.gif-track img {
+    height: 56px;
+    width: auto;
+    border-radius: 4px;
+    flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -199,5 +219,15 @@ body {
     .tab-link {
         padding: 6px 14px;
         font-size: 12px;
+    }
+}
+
+@keyframes scroll-gifs {
+    0% {
+        transform: translateX(47%);
+    }
+
+    100% {
+        transform: translateX(-100%);
     }
 }
