@@ -10,13 +10,28 @@
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
     <script>
         $(function () {
-            $("#menu-container").load("menu.html");
-        }); 
+            $("#menu-container").load("menu.html", function () {
+                // Get current page filename
+                const path = window.location.pathname;
+                const page = path.substring(path.lastIndexOf('/') + 1) || "index.html";
+
+                // Add active class to the matching link
+                $("#tab-container a").each(function () {
+                    const href = $(this).attr("href");
+                    if (href === page) {
+                        $(this).addClass("active");
+                    }
+                });
+            });
+        });
     </script>
 </head>
 
 <body>
     <div id="page-container">
+        <div id="banner-wrapper">
+            <img id="banner" src="assets/banner.png" alt="Banner">
+        </div>
         <div id="menu-container"></div>
         <ul id="list">
             <div class="text-large">

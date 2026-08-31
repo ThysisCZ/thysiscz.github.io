@@ -10,13 +10,28 @@
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
     <script>
         $(function () {
-            $("#menu-container").load("menu.html");
-        }); 
+            $("#menu-container").load("menu.html", function () {
+                // Get current page filename
+                const path = window.location.pathname;
+                const page = path.substring(path.lastIndexOf('/') + 1) || "index.html";
+
+                // Add active class to the matching link
+                $("#tab-container a").each(function () {
+                    const href = $(this).attr("href");
+                    if (href === page) {
+                        $(this).addClass("active");
+                    }
+                });
+            });
+        });
     </script>
 </head>
 
 <body>
     <div id="page-container">
+        <div id="banner-wrapper">
+            <img id="banner" src="assets/banner.png" alt="Banner">
+        </div>
         <div id="menu-container"></div>
         <div class="text-large" style="margin: 15px 0px 20px 40px">
             About Me
@@ -50,7 +65,7 @@
         <div class="text-medium" style="margin: 15px 0px 15px 40px">
             Contact
         </div>
-        <div class="text-small" style="margin: 0px 0px 8px 40px">
+        <div class="text-small" style="margin: 0px 0px 40px 40px">
             <b>Email:</b> jirithysiskerner@gmail.com
         </div>
     </div>
