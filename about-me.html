@@ -11,11 +11,9 @@
     <script>
         $(function () {
             $("#menu-container").load("menu.html", function () {
-                // Get current page filename
                 const path = window.location.pathname;
-                const page = path.substring(path.lastIndexOf('/') + 1) || "index.html";
+                const page = path.substring(path.lastIndexOf('/') + 1);
 
-                // Add active class to the matching link
                 $("#tab-container a").each(function () {
                     const href = $(this).attr("href");
                     if (href === page) {
